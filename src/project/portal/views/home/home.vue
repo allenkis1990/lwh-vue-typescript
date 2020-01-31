@@ -6,6 +6,9 @@
                 <li>
                     <el-button type="success" @click="goState('export1')">export1</el-button>
                 </li>
+                <li>
+                    <el-button type="success" @click="goState('global')">全局声明</el-button>
+                </li>
             </ul>
         </div>
     </div>
@@ -42,6 +45,12 @@
         color: green;
         .lwh {
             color: red;
+        }
+        ul{
+            li{
+                margin-bottom:10px;
+                list-style-type:none;
+            }
         }
     }
 

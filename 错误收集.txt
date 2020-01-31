@@ -21,4 +21,13 @@ hehe: number = 123  语法报错
 }
 
 4.自己加一个npm包TS编译不过
-解决：包里的package.json文件一定要加上 "typings": "types/xx.d.ts"否则会报错
+解决：node_modules包里的package.json文件一定要加上 "typings": "types/xx.d.ts"否则会报错
+
+5.自己加一个npm包TS编译不过，但是想自定义声明文件的位置
+解决：tsconfig.json加上"paths":{
+         "*":["src/project/portal/types/*"]
+       }
+这样会去找'src/project/portal/types'路径下的test2文件夹下的声明文件
+
+
+6.只有npm包的形式才需要*.d.ts 其他以路径引进来的js不需要

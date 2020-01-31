@@ -11,6 +11,12 @@
     // 支持es7装饰器
     "experimentalDecorators": true,
     "allowJs": true,
+    "baseUrl": "./",
+    //这样设置会去找 import xx from'test2' "src/project/portal/types/*"下的test2文件夹下的声明
+    "paths":{
+      "*":["src/project/portal/types/*"]
+    },
+//    "typeRoots" : ["node_modules/@types","src/project/portal/types/test2"],
     "lib":[
       "dom",
       "es5",
@@ -20,6 +26,7 @@
     ]
 //    "checkJs": true
   }
+//  "files":["node_modules","src","./vue-shims.d.ts"]
 //  "include": ["./src/project/portal"],
 //  "exclude": ["./src/project/portal/assets","./src/project/portal/store","./src/project/portal/utils","./src/project/portal/router"]
 }

@@ -30,6 +30,11 @@ export default new VueRouter({
                     name: 'export1',
                     path: 'export1',
                     component: () => import('@portal/views/export/export1.vue')
+                },
+                {
+                    name: 'global',
+                    path: 'global',
+                    component: () => import('@portal/views/global/global.vue')
                 }
             ]
         }
