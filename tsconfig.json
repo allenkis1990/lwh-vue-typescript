@@ -1,0 +1,25 @@
+//完整配置https://www.jianshu.com/p/47c29865b3a4
+{
+  "compilerOptions": {
+    // 与 Vue 的浏览器支持保持一致
+    "target": "es5",
+    // 这可以对 `this` 上的数据属性进行更严格的推断
+    "strict": true,
+    // 如果使用 webpack 2+ 或 rollup，可以利用 tree-shake:
+    "module": "esnext",
+    "moduleResolution": "node",
+    // 支持es7装饰器
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "lib":[
+      "dom",
+      "es5",
+      "es6",
+      "es7",
+      "es2015.promise"
+    ]
+//    "checkJs": true
+  }
+//  "include": ["./src/project/portal"],
+//  "exclude": ["./src/project/portal/assets","./src/project/portal/store","./src/project/portal/utils","./src/project/portal/router"]
+}

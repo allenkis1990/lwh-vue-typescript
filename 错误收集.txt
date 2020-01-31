@@ -1,0 +1,24 @@
+1."module": "es2015" ====> "module": "esnext"
+解决:https://blog.csdn.net/weixin_42959829/article/details/102917008
+
+2.export default class Home extends Vue {
+haha: string = 'haha'
+hehe: number = 123  语法报错
+解决:安装babel-plugin-transform-decorators-legacy  babel plugin里引入['transform-decorators-legacy']
+
+3.ts文件引入elementui没有按需打包 还是全部被打包进去
+解决:遇到ts文件babel处理一层在ts-loader处理
+{
+    test: /\.tsx?$/,
+    exclude: /node_modules/,
+    use: [
+        'happypack/loader?id=babel',
+        {
+            loader: "ts-loader",
+            options: { appendTsxSuffixTo: [/\.vue$/] }
+        }
+    ]
+}
+
+4.自己加一个npm包TS编译不过
+解决：包里的package.json文件一定要加上 "typings": "types/xx.d.ts"否则会报错
