@@ -5,3 +5,6 @@ declare module 'test3' {
     }
     export {test3Obj}
 }
+
+//声明一个文件引入
+declare module '*.json'
