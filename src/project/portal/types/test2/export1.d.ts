@@ -9,4 +9,14 @@ interface test2ObjItf{
 }
 declare let test2Obj:test2ObjItf
 
-export {test2Fn,test2Name,test2Obj}
+
+namespace test2Obj2{
+    let money:number
+    let love:string
+    namespace obj{
+        let name:string
+    }
+}
+
+
+export {test2Fn,test2Name,test2Obj,test2Obj2}
