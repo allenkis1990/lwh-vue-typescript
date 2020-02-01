@@ -1,8 +1,8 @@
 export const getters = {
-    initStateName: function (state) {
+    initStateName: function (state:any):string {
         return state.name + '666';
     },
-    getGetters(state,getter){
+    getGetters(state:any,getter:any):string{
         return state.name+getter.initStateName
     }
 }

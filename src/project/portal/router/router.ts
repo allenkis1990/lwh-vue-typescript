@@ -35,6 +35,11 @@ export default new VueRouter({
                     name: 'global',
                     path: 'global',
                     component: () => import('@portal/views/global/global.vue')
+                },
+                {
+                    name: 'vuex',
+                    path: 'vuex',
+                    component: () => import('@portal/views/vuex/vuex.vue')
                 }
             ]
         }
