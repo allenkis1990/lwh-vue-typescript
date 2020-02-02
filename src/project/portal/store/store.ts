@@ -6,7 +6,7 @@ import {getters} from '@portal/store/getters.ts'
 import {actions} from '@portal/store/actions.ts'
 import {modules} from '@portal/store/modules.ts'
 // import {Stores} from '@portal/utils/mod-loader'
-
+import {Stores} from '@portal/utils/mod-loader'
 Vue.use(Vuex);
 export default new Vuex.Store({
     // namespaced:true,
@@ -16,7 +16,7 @@ export default new Vuex.Store({
     getters,
     actions,
     modules:{
-        // ...Stores,
+        ...Stores,
         ...modules
     }
 })

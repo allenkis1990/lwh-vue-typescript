@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import {Routers} from '@portal/utils/mod-loader'
 Vue.use(VueRouter);
 import Root from '@portal/views/root/root.vue'
 // import {Routers} from '@portal/utils/mod-loader'
@@ -20,7 +20,7 @@ export default new VueRouter({
             name:'root',
             component: Root,
             children: [
-                // ...Routers,
+                ...Routers,
                 {
                     name: 'home',
                     path: 'home',

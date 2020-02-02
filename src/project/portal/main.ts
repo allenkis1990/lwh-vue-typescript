@@ -9,6 +9,10 @@ import elementUi from '@portal/utils/element-ui.ts'
 elementUi(Vue)
 //把axios挂载到Vue原型链上
 Vue.prototype.$http = axios
+
+import modLoader from '@portal/utils/mod-loader'
+modLoader(Vue)
+
 var vm = new Vue({
     el: '#app',
     router,
