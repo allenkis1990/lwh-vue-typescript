@@ -31,6 +31,11 @@
         }
         tit: string = 'a1Vue'
 
+
+        a1InnerFn(arr:Array<number|string>):any{
+            return arr
+        }
+
         //注入
         @Inject('a1Provide') a1Provide:any;
         @Inject('a1Provide2') a1Provide2:any;

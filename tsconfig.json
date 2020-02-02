@@ -10,6 +10,8 @@
     "moduleResolution": "node",
     // 支持es7装饰器
     "experimentalDecorators": true,
+//    strictPropertyInitialization属性会在strict设置为true时自动被设置为true。但这个属性并不合理，它要求每个实例的属性都有初始值，我们在tsconfig将其设置为false就好了
+    "strictPropertyInitialization":false,
     "allowJs": true,
     "baseUrl": "./",
     //这样设置会去找 import xx from'test2' "src/project/portal/types/*"下的test2文件夹下的声明

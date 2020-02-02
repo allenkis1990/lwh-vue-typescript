@@ -105,6 +105,7 @@
     "vue-bus-ts": "^1.0.8",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.0.2",
+    "vuex-class": "^0.3.2",
     "webcamjs": "^1.0.25"
   }
 }

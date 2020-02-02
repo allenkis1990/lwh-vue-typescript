@@ -31,3 +31,6 @@ hehe: number = 123  语法报错
 
 
 6.只有npm包的形式才需要*.d.ts 其他以路径引进来的js不需要
+
+7.@State('xx') xx  报错
+strictPropertyInitialization属性会在strict设置为true时自动被设置为true。但这个属性并不合理，它要求每个实例的属性都有初始值，我们在tsconfig将其设置为false就好了
