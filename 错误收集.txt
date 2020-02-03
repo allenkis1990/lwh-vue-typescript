@@ -34,3 +34,16 @@ hehe: number = 123  语法报错
 
 7.@State('xx') xx  报错
 strictPropertyInitialization属性会在strict设置为true时自动被设置为true。但这个属性并不合理，它要求每个实例的属性都有初始值，我们在tsconfig将其设置为false就好了
+
+8.声明非NPM包 直接在declare module里
+  declare module '@portal/utils/getUserInfo'{
+      interface userInfo{
+          name:string,
+          age:number
+      }
+      let getUserName:(userName:string)=>string
+      let getUserAge:(userAge:number)=>number
+      let getUserInfo:(userInfo:userInfo)=>userInfo
+
+      export {getUserName,getUserAge,getUserInfo}
+  }
