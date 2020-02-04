@@ -40,6 +40,11 @@ export default new VueRouter({
                     name: 'vuex',
                     path: 'vuex',
                     component: () => import('@portal/views/vuex/vuex.vue')
+                },
+                {
+                    name: 'decorator',
+                    path: 'decorator',
+                    component: () => import('@portal/views/decorator/index.vue')
                 }
             ]
         }

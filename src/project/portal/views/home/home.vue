@@ -12,6 +12,9 @@
                 <li>
                     <el-button type="success" @click="goState('vuex')">vuex</el-button>
                 </li>
+                <li>
+                    <el-button type="success" @click="goState('decorator')">装饰器</el-button>
+                </li>
             </ul>
         </div>
     </div>
