@@ -8,6 +8,12 @@
 <script lang="ts">
     import {Vue, Component} from 'vue-property-decorator'
     import {getUserName, getUserAge, getUserInfo} from '@portal/utils/getUserInfo'
+    import {fuck,shit} from '@portal/utils/fuck.ts'
+
+    let fkFn = fuck.fn('fkFn',18)
+    console.log(fkFn,333);
+
+    shit.fn(66)
     require('@portal/tsTest/export1.ts')
     @Component({
         components: {
