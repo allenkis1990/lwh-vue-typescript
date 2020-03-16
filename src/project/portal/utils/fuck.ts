@@ -3,7 +3,6 @@
  */
 import {fuckOptions} from "../types/fuck.d.ts";
 import {haha} from "../types/haha.ts";
-
 export let fuck:fuckOptions = {
     name:'fuck',
     age:18,

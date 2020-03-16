@@ -35,7 +35,7 @@ hehe: number = 123  语法报错
 7.@State('xx') xx  报错
 strictPropertyInitialization属性会在strict设置为true时自动被设置为true。但这个属性并不合理，它要求每个实例的属性都有初始值，我们在tsconfig将其设置为false就好了
 
-8.声明非NPM包 直接在declare module里
+8.声明非NPM包 直接在declare module里,也可直接把非npm包的js文件改成ts文件，一般declare module都是做扩展加的
   declare module '@portal/utils/getUserInfo'{
       interface userInfo{
           name:string,
@@ -47,3 +47,35 @@ strictPropertyInitialization属性会在strict设置为true时自动被设置为
 
       export {getUserName,getUserAge,getUserInfo}
   }
+
+9. .d.ts或者.ts都可以导出interface,type这些，其他的.d.ts或者.ts可以引用
+提供方types/fuck.d.ts:
+interface fuckOptions{
+    name:string,
+    age:number,
+    fn:(name:string,age:number)=>string
+}
+export {fuckOptions}
+
+提供方types/haha.ts:
+type haha = {
+    fn:(name:string)=>void
+}
+export {haha}
+
+
+使用方utils/fuck.ts:
+import {fuckOptions} from "../types/fuck.d.ts";
+import {haha} from "../types/haha.ts";
+export let fuck:fuckOptions = {
+    name:'fuck',
+    age:18,
+    fn(name,age){
+        return name+age
+    }
+}
+export let shit:haha = {
+    fn(name){
+        console.log(name);
+    }
+}
